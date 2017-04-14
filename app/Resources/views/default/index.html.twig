@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div id="container">
             <div id="welcome">
-                <h1>Hi this is to recap</h1>
+                <h1>Hi list of contact messages</h1>
             </div>
 
             <div id="status">
@@ -13,22 +13,34 @@
                 </p>
             </div>
 
-            <div id="next">
+            <div class="section" id="next">
                 <h2>What's next?</h2>
                 <p>
 
 
-                  asasd
+                  List of cointacts
                 </p>
                 <ul>
                     {% for user in users %}
-                        <li>{{ user.firatname }} {{  user.lastname }} - {{  user.email }}</li>
+                        <li>
+                            <table>
+                                <tr><th class="contacthead">{{ user.subject }}</th></tr>
+                                <tr>
+
+                                    <td class="contactee">{{ user.firatname }} {{  user.lastname }} - {{  user.email }}</td>
+
+                                </tr>
+                                <tr><td class="contactmessage">{{  user.message }}</td></tr>
+                            </table>
+
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
 
         </div>
     </div>
+    <button><a href="http://localhost:8000/contact-us">contact us page</a></button>
 {% endblock %}
 
 {% block stylesheets %}
@@ -38,6 +50,16 @@
     h1 { font-size: 36px; }
     h2 { font-size: 21px; margin-bottom: 1em; }
     p { margin: 0 0 1em 0; }
+    ul{ list-style: none; }
+    table, .contacthead, .contactmessage{
+        border: 1px solid #ccc;
+        width: 100%;
+        text-align: center;
+    }
+    .contacthead{
+        background: #0f0f0f;
+        color: #fff;
+    }
     a { color: #0000F0; }
     a:hover { text-decoration: none; }
     code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
@@ -58,4 +80,7 @@
         .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
     }
 </style>
+{% endblock %}
+{% block javascripts %}
+
 {% endblock %}

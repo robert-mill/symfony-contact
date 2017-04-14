@@ -15,10 +15,10 @@
 
             <div class="section" id="next">
                 <h2>What's next?</h2>
-                <p>
+                <p class="row">
 
 
-                  List of cointacts
+                 <span class="col-xs-3">s</span><span class="col-xs-6">List of cointacts</span><span class="col-xs-3">s</span>
                 </p>
                 <ul>
                     {% for user in users %}
@@ -78,9 +78,13 @@
         @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
         .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
+
     }
+
 </style>
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.css') }}">
 {% endblock %}
 {% block javascripts %}
-
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
 {% endblock %}

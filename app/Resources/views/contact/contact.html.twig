@@ -1,7 +1,25 @@
-<h1>Hi</h1>
-{{ form_start(form) }}
-{{ form_errors(form) }}
-{{ form_row(form.save, { 'label': 'Submit me' }) }}
-{{ form_end(form) }}
+{% extends 'base.html.twig' %}
 
-<button><a href="/">Home</a></button>
+{% block body %}
+ <div class="site-wrapper">
+    <div class="section">
+            <div class="col-xs-12">
+                <h1>Hi</h1>
+            </div>
+        {{ form_start(form) }}
+        {{ form_errors(form) }}
+        {{ form_row(form.save, { 'label': 'Submit me' }) }}
+        {{ form_end(form) }}
+
+       <div class="col-xs-12"> <button><a href="/">Home</a></button> </div>
+    </div>
+ </div>
+{% endblock %}
+{% block stylesheets %}
+
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-theme.css') }}">
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+{% endblock %}

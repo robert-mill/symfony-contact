@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
     <mapping directory="C:\Users\rmill_000\Documents\symfony_projects\symfony_site\symfony-contact" vcs="Git" />
   </component>
 </project>
